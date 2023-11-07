@@ -2013,7 +2013,7 @@ int platform_acdb_init(void *platform)
         node = list_head(&my_data->acdb_meta_key_list);
         key_info = node_to_item(node, struct meta_key_list, list);
         key = key_info->cal_info.nKey;
-        result = my_data->acdb_init(snd_card_name, cvd_version, key);
+        result = my_data->acdb_init();
     }
     /* Save these variables in platform_data. These will be used
        while reloading ACDB files during run time. */
